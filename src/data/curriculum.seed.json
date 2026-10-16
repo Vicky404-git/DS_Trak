@@ -1,0 +1,601 @@
+{
+  "version": 1,
+  "title": "DSA Algorithm Design Trainer: 8 weeks",
+  "weeks": [
+    {
+      "week": 1,
+      "title": "C++ Toolkit and Thinking in Constraints",
+      "goal": "Fix the C++ tools you will lean on for 8 weeks, and start judging an approach by its constraints before you write any code.",
+      "systemsLink": "Arrays are contiguous memory, which is why indexing is O(1) and inserting in the middle is O(n). Caches, buffers and kernel ring buffers all build on that fact.",
+      "items": [
+        {
+          "id": "1-D1",
+          "title": "References",
+          "kind": "drill",
+          "level": 1,
+          "timeLimitMin": null,
+          "softTimer": false,
+          "stages": null
+        },
+        {
+          "id": "1-D2",
+          "title": "const references",
+          "kind": "drill",
+          "level": 1,
+          "timeLimitMin": null,
+          "softTimer": false,
+          "stages": null
+        },
+        {
+          "id": "1-D3",
+          "title": "Iterators",
+          "kind": "drill",
+          "level": 1,
+          "timeLimitMin": null,
+          "softTimer": false,
+          "stages": null
+        },
+        {
+          "id": "1-D4",
+          "title": "sort and lambdas",
+          "kind": "drill",
+          "level": 1,
+          "timeLimitMin": null,
+          "softTimer": false,
+          "stages": null
+        },
+        {
+          "id": "1-D5",
+          "title": "pair and custom ordering",
+          "kind": "drill",
+          "level": 1,
+          "timeLimitMin": null,
+          "softTimer": false,
+          "stages": null
+        },
+        {
+          "id": "1-D6",
+          "title": "Pointers",
+          "kind": "drill",
+          "level": 1,
+          "timeLimitMin": null,
+          "softTimer": false,
+          "stages": null
+        },
+        {
+          "id": "1-D7",
+          "title": "Strings",
+          "kind": "drill",
+          "level": 1,
+          "timeLimitMin": null,
+          "softTimer": false,
+          "stages": null
+        },
+        {
+          "id": "1-D8",
+          "title": "Big-O experiment",
+          "kind": "drill",
+          "level": 1,
+          "timeLimitMin": null,
+          "softTimer": false,
+          "stages": null
+        },
+        {
+          "id": "1-B1",
+          "title": "Sensor Spike Report",
+          "kind": "baseline",
+          "level": 1,
+          "timeLimitMin": null,
+          "softTimer": false,
+          "stages": null
+        },
+        {
+          "id": "1-B2",
+          "title": "Password Policy Checker",
+          "kind": "baseline",
+          "level": 1,
+          "timeLimitMin": null,
+          "softTimer": false,
+          "stages": null
+        },
+        {
+          "id": "1-B3",
+          "title": "Duplicate Invoice Finder",
+          "kind": "baseline",
+          "level": 2,
+          "timeLimitMin": null,
+          "softTimer": false,
+          "stages": null
+        },
+        {
+          "id": "1-C1",
+          "title": "Best Resale Window",
+          "kind": "core",
+          "level": 2,
+          "timeLimitMin": null,
+          "softTimer": false,
+          "stages": null
+        },
+        {
+          "id": "1-C2",
+          "title": "Peak Traffic Window",
+          "kind": "core",
+          "level": 2,
+          "timeLimitMin": null,
+          "softTimer": false,
+          "stages": null
+        },
+        {
+          "id": "1-T1",
+          "title": "Shift Roster Rotation",
+          "kind": "timed",
+          "level": 2,
+          "timeLimitMin": 30,
+          "softTimer": true,
+          "stages": null
+        },
+        {
+          "id": "1-T2",
+          "title": "Compress the Telemetry String",
+          "kind": "timed",
+          "level": 2,
+          "timeLimitMin": 30,
+          "softTimer": true,
+          "stages": null
+        },
+        {
+          "id": "1-T3",
+          "title": "Missing Order Number",
+          "kind": "timed",
+          "level": 2,
+          "timeLimitMin": 30,
+          "softTimer": true,
+          "stages": null
+        },
+        {
+          "id": "1-W",
+          "title": "Log Analyzer v0",
+          "kind": "weekend",
+          "level": 3,
+          "timeLimitMin": null,
+          "softTimer": false,
+          "stages": 6
+        }
+      ]
+    },
+    {
+      "week": 2,
+      "title": "Hashing, Sorting as a Tool, Prefix Sums",
+      "goal": "Learn why lookups are the hidden cost in most slow solutions, how hashing removes it, and how sorting and running totals turn messy problems into simple ones.",
+      "systemsLink": "Hash tables run through systems: TLB and page-table lookups, inode/dentry caches, process tables keyed by PID, ARP and routing tables, and every `unordered_map` inside a daemon.",
+      "items": [
+        {
+          "id": "2-C1",
+          "title": "Gift Card Pair",
+          "kind": "core",
+          "level": 2,
+          "timeLimitMin": null,
+          "softTimer": false,
+          "stages": null
+        },
+        {
+          "id": "2-C2",
+          "title": "Chat Word Leaderboard",
+          "kind": "core",
+          "level": 2,
+          "timeLimitMin": null,
+          "softTimer": false,
+          "stages": null
+        },
+        {
+          "id": "2-T1",
+          "title": "Group the Anagrams",
+          "kind": "timed",
+          "level": 3,
+          "timeLimitMin": 35,
+          "softTimer": true,
+          "stages": null
+        },
+        {
+          "id": "2-T2",
+          "title": "Merge Maintenance Windows",
+          "kind": "timed",
+          "level": 3,
+          "timeLimitMin": 35,
+          "softTimer": true,
+          "stages": null
+        },
+        {
+          "id": "2-T3",
+          "title": "Budget Audit",
+          "kind": "timed",
+          "level": 4,
+          "timeLimitMin": 45,
+          "softTimer": true,
+          "stages": null
+        },
+        {
+          "id": "2-W",
+          "title": "Duplicate File Detective",
+          "kind": "weekend",
+          "level": 3,
+          "timeLimitMin": null,
+          "softTimer": false,
+          "stages": 6
+        }
+      ]
+    },
+    {
+      "week": 3,
+      "title": "Two Pointers, Sliding Window, Binary Search",
+      "goal": "Learn to move boundaries instead of restarting scans, and to search over answers when feasibility is monotone. Timed grading starts this week.",
+      "systemsLink": "Sliding windows are TCP flow control and rate limiters. Binary search is how kernels look up sorted tables (address ranges) and how `git bisect` finds the bad commit.",
+      "items": [
+        {
+          "id": "3-C1",
+          "title": "Compatible Ride Pairs",
+          "kind": "core",
+          "level": 3,
+          "timeLimitMin": null,
+          "softTimer": false,
+          "stages": null
+        },
+        {
+          "id": "3-C2",
+          "title": "First Failing Build",
+          "kind": "core",
+          "level": 3,
+          "timeLimitMin": null,
+          "softTimer": false,
+          "stages": null
+        },
+        {
+          "id": "3-T1",
+          "title": "Longest Quiet Stretch",
+          "kind": "timed",
+          "level": 3,
+          "timeLimitMin": 35,
+          "softTimer": false,
+          "stages": null
+        },
+        {
+          "id": "3-T2",
+          "title": "Fastest Quota Hit",
+          "kind": "timed",
+          "level": 3,
+          "timeLimitMin": 35,
+          "softTimer": false,
+          "stages": null
+        },
+        {
+          "id": "3-T3",
+          "title": "Parcel Ship Capacity",
+          "kind": "timed",
+          "level": 4,
+          "timeLimitMin": 45,
+          "softTimer": false,
+          "stages": null
+        },
+        {
+          "id": "3-W",
+          "title": "Request Throttle Engine",
+          "kind": "weekend",
+          "level": 4,
+          "timeLimitMin": null,
+          "softTimer": false,
+          "stages": 6
+        }
+      ]
+    },
+    {
+      "week": 4,
+      "title": "Recursion, Backtracking, Linked Lists",
+      "goal": "Think in terms of a call stack and in terms of nodes joined by pointers. Recursion gets extra time this week because it is the biggest mental jump.",
+      "systemsLink": "The call stack IS recursion: every frame is real memory, and deep recursion overflows it. Linked lists are the kernel's free-lists, run queues and LRU chains.",
+      "items": [
+        {
+          "id": "4-C1",
+          "title": "Coupon Combinations",
+          "kind": "core",
+          "level": 3,
+          "timeLimitMin": null,
+          "softTimer": false,
+          "stages": null
+        },
+        {
+          "id": "4-C2",
+          "title": "Playlist Manager",
+          "kind": "core",
+          "level": 3,
+          "timeLimitMin": null,
+          "softTimer": false,
+          "stages": null
+        },
+        {
+          "id": "4-T1",
+          "title": "Distinct Deploy Orders",
+          "kind": "timed",
+          "level": 3,
+          "timeLimitMin": 35,
+          "softTimer": false,
+          "stages": null
+        },
+        {
+          "id": "4-T2",
+          "title": "Balanced Config Generator",
+          "kind": "timed",
+          "level": 3,
+          "timeLimitMin": 35,
+          "softTimer": false,
+          "stages": null
+        },
+        {
+          "id": "4-T3",
+          "title": "Prune the Oldest Logs",
+          "kind": "timed",
+          "level": 3,
+          "timeLimitMin": 40,
+          "softTimer": false,
+          "stages": null
+        },
+        {
+          "id": "4-W",
+          "title": "Free-List Memory Allocator",
+          "kind": "weekend",
+          "level": 4,
+          "timeLimitMin": null,
+          "softTimer": false,
+          "stages": 6
+        }
+      ]
+    },
+    {
+      "week": 5,
+      "title": "Stacks, Queues, Heaps",
+      "goal": "Learn which structure answers “what is the most recent unfinished thing?”, “what is next in line?”, and “what is the best thing right now?” efficiently.",
+      "systemsLink": "Run queues and priority schedulers are heaps and queues. Interrupt handling and call frames are stacks. Ring buffers (like `io_uring`) are queues.",
+      "items": [
+        {
+          "id": "5-C1",
+          "title": "Config Bracket Validator",
+          "kind": "core",
+          "level": 3,
+          "timeLimitMin": null,
+          "softTimer": false,
+          "stages": null
+        },
+        {
+          "id": "5-C2",
+          "title": "Cooling Countdown",
+          "kind": "core",
+          "level": 3,
+          "timeLimitMin": null,
+          "softTimer": false,
+          "stages": null
+        },
+        {
+          "id": "5-T1",
+          "title": "CPU Scheduler Judge",
+          "kind": "timed",
+          "level": 4,
+          "timeLimitMin": 45,
+          "softTimer": false,
+          "stages": null
+        },
+        {
+          "id": "5-T2",
+          "title": "Top-K Latency Tracker",
+          "kind": "timed",
+          "level": 3,
+          "timeLimitMin": 35,
+          "softTimer": false,
+          "stages": null
+        },
+        {
+          "id": "5-T3",
+          "title": "Peak Load per Window",
+          "kind": "timed",
+          "level": 4,
+          "timeLimitMin": 45,
+          "softTimer": false,
+          "stages": null
+        },
+        {
+          "id": "5-W",
+          "title": "Job Scheduler Engine",
+          "kind": "weekend",
+          "level": 4,
+          "timeLimitMin": null,
+          "softTimer": false,
+          "stages": 6
+        }
+      ]
+    },
+    {
+      "week": 6,
+      "title": "Trees, BST, BFS and DFS",
+      "goal": "Treat hierarchical data and grids as graphs you traverse. Learn what a recursion returns, what it passes down, and when an iterative version is safer.",
+      "systemsLink": "Filesystems are trees, and B-trees index databases and filesystems. DFS and BFS drive directory walks like `find`, and a process tree is literally what `pstree` prints.",
+      "items": [
+        {
+          "id": "6-C1",
+          "title": "Org Chart Levels",
+          "kind": "core",
+          "level": 3,
+          "timeLimitMin": null,
+          "softTimer": false,
+          "stages": null
+        },
+        {
+          "id": "6-C2",
+          "title": "Index Integrity Check",
+          "kind": "core",
+          "level": 3,
+          "timeLimitMin": null,
+          "softTimer": false,
+          "stages": null
+        },
+        {
+          "id": "6-T1",
+          "title": "Server Clusters",
+          "kind": "timed",
+          "level": 3,
+          "timeLimitMin": 35,
+          "softTimer": false,
+          "stages": null
+        },
+        {
+          "id": "6-T2",
+          "title": "Shortest Maintenance Path",
+          "kind": "timed",
+          "level": 3,
+          "timeLimitMin": 35,
+          "softTimer": false,
+          "stages": null
+        },
+        {
+          "id": "6-T3",
+          "title": "Longest Cable Run",
+          "kind": "timed",
+          "level": 4,
+          "timeLimitMin": 45,
+          "softTimer": false,
+          "stages": null
+        },
+        {
+          "id": "6-W",
+          "title": "Filesystem Explorer",
+          "kind": "weekend",
+          "level": 5,
+          "timeLimitMin": null,
+          "softTimer": false,
+          "stages": 6
+        }
+      ]
+    },
+    {
+      "week": 7,
+      "title": "Graphs: Dependencies, Routes, Connectivity",
+      "goal": "Model real systems as nodes and edges, then pick the right traversal: ordering, shortest paths, or components.",
+      "systemsLink": "Dependency graphs run `make`, `apt` and `systemd` unit ordering. Shortest paths power routing protocols such as OSPF. A cycle in a wait-for graph is a deadlock.",
+      "items": [
+        {
+          "id": "7-C1",
+          "title": "Install Order",
+          "kind": "core",
+          "level": 4,
+          "timeLimitMin": null,
+          "softTimer": false,
+          "stages": null
+        },
+        {
+          "id": "7-C2",
+          "title": "Cheapest Delivery Route",
+          "kind": "core",
+          "level": 4,
+          "timeLimitMin": null,
+          "softTimer": false,
+          "stages": null
+        },
+        {
+          "id": "7-T1",
+          "title": "Rotting Servers",
+          "kind": "timed",
+          "level": 4,
+          "timeLimitMin": 40,
+          "softTimer": false,
+          "stages": null
+        },
+        {
+          "id": "7-T2",
+          "title": "Network Partitions",
+          "kind": "timed",
+          "level": 3,
+          "timeLimitMin": 30,
+          "softTimer": false,
+          "stages": null
+        },
+        {
+          "id": "7-T3",
+          "title": "Cheapest Route With Limited Relays",
+          "kind": "timed",
+          "level": 4,
+          "timeLimitMin": 50,
+          "softTimer": false,
+          "stages": null
+        },
+        {
+          "id": "7-W",
+          "title": "Network Router Simulator",
+          "kind": "weekend",
+          "level": 5,
+          "timeLimitMin": null,
+          "softTimer": false,
+          "stages": 5
+        }
+      ]
+    },
+    {
+      "week": 8,
+      "title": "Dynamic Programming, Mixed Problems, Capstone",
+      "goal": "Learn to spot overlapping subproblems and define a state. Then prove you can handle problems where nobody tells you the technique.",
+      "systemsLink": "Memoization is caching, and DP tables are what `diff` (LCS), spell checkers and query planners build. “Remember sub-results” is the same instinct as a page cache.",
+      "items": [
+        {
+          "id": "8-C1",
+          "title": "Vending Machine Change",
+          "kind": "core",
+          "level": 3,
+          "timeLimitMin": null,
+          "softTimer": false,
+          "stages": null
+        },
+        {
+          "id": "8-C2",
+          "title": "Diff Tool Core",
+          "kind": "core",
+          "level": 4,
+          "timeLimitMin": null,
+          "softTimer": false,
+          "stages": null
+        },
+        {
+          "id": "8-T1",
+          "title": "Maintenance Windows",
+          "kind": "timed",
+          "level": 3,
+          "timeLimitMin": 35,
+          "softTimer": false,
+          "stages": null
+        },
+        {
+          "id": "8-T2",
+          "title": "Split the Cargo",
+          "kind": "timed",
+          "level": 4,
+          "timeLimitMin": 40,
+          "softTimer": false,
+          "stages": null
+        },
+        {
+          "id": "8-T3",
+          "title": "Fraud Burst Detector",
+          "kind": "timed",
+          "level": 4,
+          "timeLimitMin": 50,
+          "softTimer": false,
+          "stages": null
+        },
+        {
+          "id": "8-W",
+          "title": "Order Matching Engine (Capstone)",
+          "kind": "weekend",
+          "level": 5,
+          "timeLimitMin": null,
+          "softTimer": false,
+          "stages": 6
+        }
+      ]
+    }
+  ]
+}
