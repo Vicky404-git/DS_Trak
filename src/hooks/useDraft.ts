@@ -8,7 +8,10 @@ export function useDraft<T>(value: T, onCommit: (next: T) => void, delay = 500):
   const [draft, setDraft] = useState<T>(value)
   const dirty = useRef(false)
   const onCommitRef = useRef(onCommit)
-  onCommitRef.current = onCommit
+
+  useEffect(() => {
+    onCommitRef.current = onCommit
+  }, [onCommit])
 
   useEffect(() => {
     if (!dirty.current) setDraft(value)

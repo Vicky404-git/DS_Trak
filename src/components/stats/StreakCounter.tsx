@@ -2,6 +2,7 @@ import { useMemo } from 'react'
 import { useDataStore } from '../../store/dataStore'
 import { computeStreak } from '../../core/stats/heatmap'
 import { toISODate } from '../../core/utils/dateUtils'
+import { useNow } from '../../hooks/useNow'
 
 const DAYS = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday']
 
@@ -9,9 +10,10 @@ export default function StreakCounter() {
   const activity = useDataStore((s) => s.activity)
   const settings = useDataStore((s) => s.settings)
   const updateSettings = useDataStore((s) => s.updateSettings)
+  const now = useNow(60_000)
 
   const streak = useMemo(() => computeStreak(activity, settings.restDay), [activity, settings.restDay])
-  const todayMinutes = activity.find((a) => a.date === toISODate(new Date()))?.minutes ?? 0
+  const todayMinutes = activity.find((a) => a.date === toISODate(new Date(now)))?.minutes ?? 0
   const targetPct = Math.min(100, Math.round((todayMinutes / settings.dailyTargetMin) * 100))
 
   return (
