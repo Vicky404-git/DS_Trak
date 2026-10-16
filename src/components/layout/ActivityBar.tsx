@@ -1,30 +1,40 @@
-interface Props {
-  activeView: 'curriculum' | 'search' | 'timer' | 'stats' | 'settings'
-  onViewChange: (view: 'curriculum' | 'search' | 'timer' | 'stats' | 'settings') => void
-  onToggleSidebar: () => void
-}
+import { useUIStore, type ActiveView } from '../../store/uiStore'
 
-export default function ActivityBar({ activeView, onViewChange, onToggleSidebar }: Props) {
-  const items = [
-    { id: 'curriculum', icon: '📚', title: 'Curriculum' },
-    { id: 'search', icon: '🔍', title: 'Search' },
-    { id: 'timer', icon: '⏱️', title: 'Timer' },
-    { id: 'stats', icon: '📊', title: 'Stats' },
-    { id: 'settings', icon: '⚙️', title: 'Settings' },
-  ] as const
+const ITEMS: Array<{ id: ActiveView; icon: string; title: string }> = [
+  { id: 'curriculum', icon: '📁', title: 'Curriculum' },
+  { id: 'search', icon: '🔍', title: 'Search' },
+  { id: 'timer', icon: '⏱', title: 'Timer' },
+  { id: 'stats', icon: '📊', title: 'Stats' },
+  { id: 'settings', icon: '⚙', title: 'Settings' },
+]
+
+export default function ActivityBar() {
+  const activeView = useUIStore((s) => s.activeView)
+  const setActiveView = useUIStore((s) => s.setActiveView)
+  const openTab = useUIStore((s) => s.openTab)
+
+  function handleClick(id: ActiveView) {
+    setActiveView(id)
+    if (id === 'stats') openTab({ id: 'view-stats', kind: 'stats', title: 'Stats' })
+    if (id === 'settings') openTab({ id: 'view-settings', kind: 'settings', title: 'Settings' })
+    if (id === 'timer') openTab({ id: 'view-timer', kind: 'timer', title: 'Timer' })
+    if (id === 'search') openTab({ id: 'view-search', kind: 'search', title: 'Search' })
+  }
 
   return (
-    <div className="w-12 bg-[var(--vscode-activity-bar-bg)] border-r border-[var(--vscode-border)] flex flex-col items-center py-2">
-      {items.map((item) => (
+    <div className="flex w-12 flex-col items-center border-r border-[var(--vscode-border)] bg-[var(--vscode-activity-bar-bg)] py-1">
+      {ITEMS.map((item) => (
         <button
           key={item.id}
-          className={`w-10 h-10 mb-1 rounded flex items-center justify-center hover:bg-[var(--vscode-tab-inactive-bg)] ${
-            activeView === item.id ? 'bg-[var(--vscode-tab-active-bg)]' : ''
-          }`}
           title={item.title}
-          onClick={() => onViewChange(item.id)}
+          onClick={() => handleClick(item.id)}
+          className={`mb-1 flex h-10 w-10 items-center justify-center rounded text-lg ${
+            activeView === item.id
+              ? 'bg-[var(--vscode-tab-active-bg)] text-white'
+              : 'text-[var(--vscode-text)] hover:bg-[var(--vscode-tab-inactive-bg)]'
+          }`}
         >
-          <span>{item.icon}</span>
+          <span aria-hidden>{item.icon}</span>
         </button>
       ))}
     </div>
