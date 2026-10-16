@@ -1,0 +1,29 @@
+@import "tailwindcss";
+
+:root {
+  --vscode-editor-bg: #1e1e1e;
+  --vscode-sidebar-bg: #252526;
+  --vscode-activity-bar-bg: #333333;
+  --vscode-status-bar-bg: #007acc;
+  --vscode-tab-inactive-bg: #2d2d2d;
+  --vscode-tab-active-bg: #1e1e1e;
+  --vscode-border: #3c3c3c;
+  --vscode-text: #cccccc;
+}
+
+html, body, #root {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  background-color: var(--vscode-editor-bg);
+  color: var(--vscode-text);
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code, pre, .monaco-editor {
+  font-family: 'JetBrains Mono', 'Consolas', ui-monospace, monospace;
+}
