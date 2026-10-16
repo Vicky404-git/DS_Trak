@@ -2,6 +2,7 @@ import { useMemo } from 'react'
 import { useDataStore } from '../../store/dataStore'
 import { buildHeatmap } from '../../core/stats/heatmap'
 import { formatDuration } from '../../core/utils/dateUtils'
+import { useNow } from '../../hooks/useNow'
 
 function level(minutes: number): number {
   if (minutes <= 0) return 0
@@ -15,7 +16,8 @@ const COLORS = ['#2d2d2d', '#0e4429', '#006d32', '#26a641', '#39d353']
 
 export default function CalendarHeatmap() {
   const activity = useDataStore((s) => s.activity)
-  const grid = useMemo(() => buildHeatmap(activity, new Date(), 16), [activity])
+  const now = useNow(60_000)
+  const grid = useMemo(() => buildHeatmap(activity, new Date(now), 16), [activity, now])
   const total = useMemo(() => activity.reduce((sum, a) => sum + a.minutes, 0), [activity])
 
   return (

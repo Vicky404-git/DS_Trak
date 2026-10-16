@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react'
+import { useState } from 'react'
 import { useDataStore } from '../../store/dataStore'
 import { getItemMeta } from '../../data/itemMeta'
 import TimerControls from './TimerControls'
@@ -20,12 +20,9 @@ export default function ItemTab({ itemId }: { itemId: string }) {
   const markSolved = useDataStore((s) => s.markSolved)
   const completeRevisit = useDataStore((s) => s.completeRevisit)
 
-  const [result, setResult] = useState<ResultType>('CLEAN')
+  const [resultOverride, setResultOverride] = useState<ResultType | null>(null)
   const [saved, setSaved] = useState(false)
-
-  useEffect(() => {
-    if (item?.result) setResult(item.result)
-  }, [item?.result])
+  const result = resultOverride ?? item?.result ?? 'CLEAN'
 
   if (!item || !meta) {
     return <div className="p-6 text-sm text-gray-400">Item not found.</div>
@@ -101,7 +98,7 @@ export default function ItemTab({ itemId }: { itemId: string }) {
               {RESULTS.map((r) => (
                 <button
                   key={r}
-                  onClick={() => setResult(r)}
+                  onClick={() => setResultOverride(r)}
                   className={`rounded px-2.5 py-1 text-xs ${
                     result === r
                       ? 'bg-[var(--vscode-status-bar-bg)] text-white'

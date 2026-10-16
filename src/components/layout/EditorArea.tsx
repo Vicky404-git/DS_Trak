@@ -18,7 +18,7 @@ export default function EditorArea() {
       <div className="min-h-0 flex-1 overflow-auto">
         {!active && <WelcomeScreen />}
         {active?.kind === 'welcome' && <WelcomeScreen />}
-        {active?.kind === 'item' && active.itemId && <ItemTab itemId={active.itemId} />}
+        {active?.kind === 'item' && active.itemId && <ItemTab key={active.itemId} itemId={active.itemId} />}
         {active?.kind === 'stats' && <StatsView />}
         {active?.kind === 'settings' && <SettingsView />}
         {active?.kind === 'timer' && <TimerView />}
